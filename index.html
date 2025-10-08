@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Novo Ensino Médio</title>
 
-  <!-- Font Awesome para ícones -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,7 +12,6 @@
   />
 
   <style>
-    /* ======= GERAL ======= */
     body {
       margin: 0;
       font-family: "Poppins", Arial, sans-serif;
@@ -54,7 +52,6 @@
       color: #e67e22;
     }
 
-    /* ======= SEÇÃO PRINCIPAL ======= */
     main {
       max-width: 1200px;
       margin: 40px auto;
@@ -75,7 +72,6 @@
       color: #555;
     }
 
-    /* ======= GRID ======= */
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,7 +81,6 @@
     .card {
       border-radius: 15px;
       overflow: hidden;
-      color: white;
       text-align: center;
       padding: 30px 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -94,7 +89,7 @@
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
     }
 
     .card i {
@@ -105,11 +100,7 @@
     .card h3 {
       font-size: 1.3rem;
       margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 1rem;
-      margin-bottom: 20px;
+      font-weight: 600;
     }
 
     .btn-inscrever {
@@ -128,13 +119,23 @@
       color: #000;
     }
 
-    /* ======= CORES DOS CURSOS ======= */
+    .location-link {
+      display: block;
+      margin-top: 15px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    /* === CORES === */
     .regular {
       background-color: #3498db;
+      color: white;
     }
 
     .adm {
       background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: #d6e0f0;
     }
 
     .docentes {
@@ -143,16 +144,8 @@
     }
 
     .ads {
-      background: linear-gradient(135deg, #006400, #000);
-    }
-
-    /* ======= LINK DE LOCALIZAÇÃO ======= */
-    .location-link {
-      display: block;
-      margin-top: 15px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      transition: color 0.3s;
+      background: linear-gradient(135deg, #00aa55, #000000);
+      color: #eaffea;
     }
 
     .regular .location-link {
@@ -175,7 +168,6 @@
       text-decoration: underline;
     }
 
-    /* ======= RESPONSIVIDADE ======= */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -197,8 +189,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Cabeçalho -->
   <header>
     <div class="logo">
       <i class="fas fa-graduation-cap"></i> EscolaXYZ
@@ -209,17 +199,14 @@
     </nav>
   </header>
 
-  <!-- Conteúdo Principal -->
   <main>
     <h1>NOVO ENSINO MÉDIO</h1>
     <p class="descricao">
-      O novo ensino médio traz uma formação mais flexível, permitindo que o aluno escolha itinerários formativos 
+      O novo ensino médio traz uma formação mais flexível, permitindo que o aluno escolha itinerários formativos
       de acordo com seus interesses e projetos de vida, desenvolvendo competências técnicas, humanas e profissionais.
     </p>
 
     <div class="card-container">
-
-      <!-- Regular -->
       <div class="card regular">
         <i class="fas fa-school"></i>
         <h3>Ensino Médio Regular</h3>
@@ -227,7 +214,6 @@
         <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
       </div>
 
-      <!-- ADM -->
       <div class="card adm">
         <i class="fas fa-briefcase"></i>
         <h3>Administração</h3>
@@ -235,7 +221,6 @@
         <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
       </div>
 
-      <!-- Formação de Docentes -->
       <div class="card docentes">
         <i class="fas fa-chalkboard-teacher"></i>
         <h3>Formação de Docentes</h3>
@@ -243,17 +228,13 @@
         <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
       </div>
 
-      <!-- ADS -->
       <div class="card ads">
         <i class="fas fa-laptop-code"></i>
         <h3>Análise e Desenvolvimento de Sistemas</h3>
         <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
         <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
       </div>
-
     </div>
   </main>
-
 </body>
 </html>
-
