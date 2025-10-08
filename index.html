@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Novo Ensino Médio</title>
 
+  <!-- Font Awesome para ícones -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -12,6 +13,7 @@
   />
 
   <style>
+    /* ======= GERAL ======= */
     body {
       margin: 0;
       font-family: "Poppins", Arial, sans-serif;
@@ -72,6 +74,7 @@
       color: #555;
     }
 
+    /* ======= GRID ======= */
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -103,38 +106,50 @@
       font-weight: 600;
     }
 
-    .btn-inscrever {
+    .btn-saiba-mais {
       display: inline-block;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: white;
       color: #333;
-      padding: 10px 18px;
+      padding: 10px 25px;
       border-radius: 25px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s, color 0.3s;
+      font-weight: 500;
+      transition: transform 0.3s, background 0.3s, color 0.3s;
+      margin-bottom: 10px;
     }
 
-    .btn-inscrever:hover {
-      background-color: #fff;
-      color: #000;
+    .btn-saiba-mais:hover {
+      transform: scale(1.05);
     }
 
     .location-link {
       display: block;
-      margin-top: 15px;
+      margin-top: 8px;
       font-size: 1.2rem;
       text-decoration: none;
       transition: color 0.3s;
     }
 
-    /* === CORES === */
+    /* ======= CORES DOS CURSOS ======= */
     .regular {
       background-color: #3498db;
       color: white;
     }
+    .regular .btn-saiba-mais {
+      color: #3498db;
+    }
+    .regular .location-link {
+      color: #f4f4f4;
+    }
 
     .adm {
       background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: #d6e0f0;
+    }
+    .adm .btn-saiba-mais {
+      color: #001f3f;
+    }
+    .adm .location-link {
       color: #d6e0f0;
     }
 
@@ -142,30 +157,24 @@
       background: linear-gradient(135deg, #b57edc, #f5deb3);
       color: #3b006a;
     }
+    .docentes .btn-saiba-mais {
+      background-color: #4a2e75;
+      color: white;
+    }
+    .docentes .location-link,
+    .docentes .btn-inscrever {
+      color: #4a2e75;
+    }
 
     .ads {
       background: linear-gradient(135deg, #00aa55, #000000);
       color: #eaffea;
     }
-
-    .regular .location-link {
-      color: #f4f4f4;
+    .ads .btn-saiba-mais {
+      color: #00aa55;
     }
-
-    .adm .location-link {
-      color: #d6e0f0;
-    }
-
-    .docentes .location-link {
-      color: #6b00b3;
-    }
-
     .ads .location-link {
       color: #00ff88;
-    }
-
-    .location-link:hover {
-      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -189,6 +198,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">
       <i class="fas fa-graduation-cap"></i> EscolaXYZ
@@ -207,34 +217,41 @@
     </p>
 
     <div class="card-container">
+
       <div class="card regular">
         <i class="fas fa-school"></i>
         <h3>Ensino Médio Regular</h3>
-        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
+        <a href="#" class="btn-saiba-mais">Saiba mais</a>
         <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
+        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
       </div>
 
       <div class="card adm">
         <i class="fas fa-briefcase"></i>
         <h3>Administração</h3>
-        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
+        <a href="#" class="btn-saiba-mais">Saiba mais</a>
         <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
+        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
       </div>
 
       <div class="card docentes">
         <i class="fas fa-chalkboard-teacher"></i>
         <h3>Formação de Docentes</h3>
-        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
+        <a href="#" class="btn-saiba-mais">Saiba mais</a>
         <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
+        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
       </div>
 
       <div class="card ads">
         <i class="fas fa-laptop-code"></i>
         <h3>Análise e Desenvolvimento de Sistemas</h3>
-        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
+        <a href="#" class="btn-saiba-mais">Saiba mais</a>
         <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
+        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
       </div>
+
     </div>
   </main>
+
 </body>
 </html>
