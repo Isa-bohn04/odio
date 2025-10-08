@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ensino Médio Regular - Médio Connect</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== Reset e Geral ===== */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', Arial, sans-serif; background-color: #f4f4f4; color: #333; }
+    a { text-decoration: none; }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top:0;
+      z-index:100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .logo { font-size: 1.6rem; font-weight: 600; display: flex; align-items: center; gap:10px; color:#fff; }
+    nav a { color:white; font-size:1.1rem; margin-left:20px; display:inline-flex; align-items:center; gap:5px; transition:0.3s; }
+    nav a:hover { color:#e67e22; }
+
+    main { max-width: 1200px; margin:80px auto 40px; padding:0 20px; }
+
+    /* ===== CARD DE DESTAQUE ===== */
+    .descricao-card {
+      background: #fff;
+      color: #2c3e50;
+      padding: 40px 25px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      max-width: 900px;
+      margin: 0 auto 60px;
+      text-align: center;
+      border: 2px solid #2c3e50;
+    }
+
+    .descricao-card h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #2c3e50;
+    }
+
+    .descricao-card p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* ===== SEÇÕES INFORMATIVAS ===== */
+    section {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      border-left: 5px solid #2c3e50;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    section p, ul, li {
+      color: #2c3e50;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media(max-width:768px){
+      header { flex-direction:column; text-align:center; }
+      nav a { margin:8px; }
+      .descricao-card h1 { font-size:2.2rem; }
+      .descricao-card p, section p, li { font-size:1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><i class="fas fa-graduation-cap"></i> EscolaXYZ</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- CARD DE DESTAQUE -->
+    <div class="descricao-card">
+      <h1>Ensino Médio Regular</h1>
+      <p>
+        O Ensino Médio Regular oferece uma formação sólida e abrangente, preparando os alunos para o ensino superior ou para o mercado de trabalho. O curso desenvolve competências cognitivas, sociais e pessoais, promovendo o crescimento acadêmico e humano dos estudantes.
+      </p>
+    </div>
+
+    <!-- SOBRE O CURSO -->
+    <section>
+      <h2>Sobre o Curso</h2>
+      <p>
+        O Ensino Médio Regular é voltado para o desenvolvimento completo do estudante, incluindo habilidades de raciocínio lógico, interpretação, comunicação e conhecimento geral. O aluno é capaz de:
+      </p>
+      <ul>
+        <li>Compreender conteúdos fundamentais de diversas áreas;</li>
+        <li>Desenvolver pensamento crítico e análise;</li>
+        <li>Preparar-se para o ensino superior;</li>
+        <li>Participar de atividades sociais e culturais;</li>
+        <li>Planejar seus estudos e projetos de vida.</li>
+      </ul>
+    </section>
+
+    <!-- DISCIPLINAS E HABILIDADES -->
+    <section>
+      <h2>Disciplinas e Habilidades Desenvolvidas</h2>
+      <p>
+        Durante o curso, o aluno desenvolve competências essenciais, como:
+      </p>
+      <ul>
+        <li>Linguagens, códigos e suas tecnologias;</li>
+        <li>Matemática e suas aplicações;</li>
+        <li>Ciências da natureza e seus métodos;</li>
+        <li>Ciências humanas e sociais;</li>
+        <li>Raciocínio crítico e resolução de problemas;</li>
+        <li>Comunicação eficaz e trabalho em equipe.</li>
+      </ul>
+    </section>
+
+    <!-- BENEFÍCIOS DO CURSO -->
+    <section>
+      <h2>Benefícios do Curso</h2>
+      <ul>
+        <li>Formação completa e equilibrada;</li>
+        <li>Preparação para estudos futuros e mercado de trabalho;</li>
+        <li>Desenvolvimento de habilidades cognitivas e sociais;</li>
+        <li>Flexibilidade para escolha de itinerários formativos;</li>
+        <li>Base sólida para crescimento acadêmico e pessoal.</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
