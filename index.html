@@ -83,21 +83,28 @@
 
     /* ======== CONTEÚDO ======== */
     main {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: 0 auto 60px;
       padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
 
-    /* ======== CARD ======== */
+    /* ======== CARD BASE ======== */
     .card {
-      background-color: white;
+      flex: 1;
+      min-width: 280px;
+      max-width: 300px;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
     }
 
     .card:hover {
@@ -107,64 +114,100 @@
 
     .card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
     }
 
     .card-content {
       padding: 20px;
       text-align: center;
+      flex-grow: 1;
     }
 
     .card h3 {
       font-size: 1.3rem;
       margin-bottom: 15px;
-      color: #007bff;
     }
 
     .btn-saiba-mais {
-      background: linear-gradient(135deg, #007bff, #00aaff);
       color: white;
       padding: 10px 25px;
       border-radius: 30px;
       font-weight: 500;
-      transition: background 0.3s, transform 0.3s;
+      transition: transform 0.3s;
       display: inline-block;
+      margin-top: 10px;
     }
 
     .btn-saiba-mais:hover {
       transform: scale(1.05);
-      background: linear-gradient(135deg, #0069d9, #0099e6);
     }
 
-    /* ======== LINK LOCALIZAÇÃO ======== */
     .location-link {
       display: block;
       text-align: center;
       padding: 15px 0;
       font-size: 1.6rem;
-      color: #007bff;
-      background-color: #f0f8ff;
-      border-top: 1px solid #e6f0ff;
-      transition: background 0.3s, color 0.3s;
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: background 0.3s;
     }
 
     .location-link:hover {
-      color: #0056b3;
-      background-color: #e3f2ff;
+      background-color: rgba(255, 255, 255, 0.3);
     }
 
-    /* ======== RESPONSIVIDADE ======== */
+    /* ======== CORES PERSONALIZADAS ======== */
+    /* Regular */
+    .regular {
+      background: linear-gradient(135deg, #007bff, #00aaff);
+      color: white;
+    }
+    .regular .btn-saiba-mais {
+      background: white;
+      color: #007bff;
+    }
+
+    /* Administração */
+    .adm {
+      background: linear-gradient(135deg, #001f3f, #007bff);
+      color: white;
+    }
+    .adm .btn-saiba-mais {
+      background: white;
+      color: #001f3f;
+    }
+
+    /* Formação de Docentes */
+    .docentes {
+      background: linear-gradient(135deg, #d8b4fe, #f5deb3);
+      color: #4a2e75;
+    }
+    .docentes .btn-saiba-mais {
+      background: #4a2e75;
+      color: white;
+    }
+
+    /* ADS */
+    .ads {
+      background: linear-gradient(135deg, #00b894, #000);
+      color: white;
+    }
+    .ads .btn-saiba-mais {
+      background: white;
+      color: #00b894;
+    }
+
+    @media (max-width: 1100px) {
+      main {
+        flex-wrap: wrap;
+      }
+    }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-      }
-
-      nav a {
-        margin-left: 0;
-        margin-right: 15px;
       }
 
       .intro h1 {
@@ -198,51 +241,45 @@
 
   <!-- Cards -->
   <main>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/800x250/80bfff/ffffff?text=Ensino+Médio+Regular" alt="Ensino Médio Regular" />
+    <div class="card regular">
       <div class="card-content">
         <h3>Ensino Médio Regular</h3>
         <a href="curso-regular.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-regular.html" class="location-link" title="Ver localização">
+      <a href="localizacao-regular.html" class="location-link">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/800x250/00aaff/ffffff?text=Administração" alt="Curso Administração" />
+    <div class="card adm">
       <div class="card-content">
         <h3>Administração</h3>
         <a href="curso-adm.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-adm.html" class="location-link" title="Ver localização">
+      <a href="localizacao-adm.html" class="location-link">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/800x250/66ccff/ffffff?text=Formação+de+Docentes" alt="Curso Docentes" />
+    <div class="card docentes">
       <div class="card-content">
         <h3>Formação de Docentes</h3>
         <a href="curso-docentes.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-docentes.html" class="location-link" title="Ver localização">
+      <a href="localizacao-docentes.html" class="location-link">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/800x250/007bff/ffffff?text=Análise+e+Desenvolvimento+de+Sistemas" alt="Curso ADS" />
+    <div class="card ads">
       <div class="card-content">
         <h3>Análise e Desenvolvimento de Sistemas</h3>
         <a href="curso-ads.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-ads.html" class="location-link" title="Ver localização">
+      <a href="localizacao-ads.html" class="location-link">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
-
   </main>
 
 </body>
