@@ -12,11 +12,14 @@
     crossorigin="anonymous"
   />
 
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     /* ======== GERAL ======== */
     body {
       margin: 0;
-      font-family: 'Poppins', Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #f8faff;
       color: #2c3e50;
       line-height: 1.6;
@@ -55,6 +58,9 @@
       font-size: 1.1rem;
       margin-left: 25px;
       transition: opacity 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
     nav a:hover {
@@ -74,6 +80,7 @@
       color: #007bff;
       margin-bottom: 15px;
       letter-spacing: 1px;
+      font-weight: 600;
     }
 
     .intro p {
@@ -112,12 +119,6 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
     .card-content {
       padding: 20px;
       text-align: center;
@@ -127,6 +128,7 @@
     .card h3 {
       font-size: 1.3rem;
       margin-bottom: 15px;
+      font-weight: 600;
     }
 
     .btn-saiba-mais {
@@ -143,17 +145,34 @@
       transform: scale(1.05);
     }
 
-    .location-link {
-      display: block;
+    .location-area {
       text-align: center;
-      padding: 15px 0;
+      padding: 15px 0 20px;
+    }
+
+    .location-link {
       font-size: 1.6rem;
-      background-color: rgba(255, 255, 255, 0.2);
-      transition: background 0.3s;
+      color: white;
+      margin-bottom: 8px;
+      display: block;
+      transition: transform 0.3s;
     }
 
     .location-link:hover {
-      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
+    .inscrever-link {
+      display: inline-block;
+      font-size: 1rem;
+      color: white;
+      font-weight: 500;
+      text-decoration: underline;
+      transition: opacity 0.3s;
+    }
+
+    .inscrever-link:hover {
+      opacity: 0.8;
     }
 
     /* ======== CORES PERSONALIZADAS ======== */
@@ -224,8 +243,8 @@
       <i class="fas fa-graduation-cap"></i> EscolaXYZ
     </div>
     <nav>
-      <a href="#"><i class="fas fa-home"></i></a>
-      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-home"></i> Home</a>
+      <a href="#"><i class="fas fa-envelope"></i> Contato</a>
     </nav>
   </header>
 
@@ -246,9 +265,10 @@
         <h3>Ensino Médio Regular</h3>
         <a href="curso-regular.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-regular.html" class="location-link">
-        <i class="fas fa-map-marker-alt"></i>
-      </a>
+      <div class="location-area">
+        <a href="localizacao-regular.html" class="location-link"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#" class="inscrever-link">Clique aqui para se inscrever</a>
+      </div>
     </div>
 
     <div class="card adm">
@@ -256,9 +276,10 @@
         <h3>Administração</h3>
         <a href="curso-adm.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-adm.html" class="location-link">
-        <i class="fas fa-map-marker-alt"></i>
-      </a>
+      <div class="location-area">
+        <a href="localizacao-adm.html" class="location-link"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#" class="inscrever-link">Clique aqui para se inscrever</a>
+      </div>
     </div>
 
     <div class="card docentes">
@@ -266,9 +287,10 @@
         <h3>Formação de Docentes</h3>
         <a href="curso-docentes.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-docentes.html" class="location-link">
-        <i class="fas fa-map-marker-alt"></i>
-      </a>
+      <div class="location-area">
+        <a href="localizacao-docentes.html" class="location-link"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#" class="inscrever-link">Clique aqui para se inscrever</a>
+      </div>
     </div>
 
     <div class="card ads">
@@ -276,9 +298,10 @@
         <h3>Análise e Desenvolvimento de Sistemas</h3>
         <a href="curso-ads.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-ads.html" class="location-link">
-        <i class="fas fa-map-marker-alt"></i>
-      </a>
+      <div class="location-area">
+        <a href="localizacao-ads.html" class="location-link"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#" class="inscrever-link">Clique aqui para se inscrever</a>
+      </div>
     </div>
   </main>
 
