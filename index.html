@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cursos | EscolaXYZ</title>
+  <title>Novo Ensino Médio | EscolaXYZ</title>
 
   <!-- Ícones -->
   <link
@@ -61,13 +61,33 @@
       opacity: 0.8;
     }
 
+    /* ======== SEÇÃO DE TÍTULO ======== */
+    .intro {
+      max-width: 900px;
+      margin: 120px auto 40px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .intro h1 {
+      font-size: 2.3rem;
+      color: #007bff;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
     /* ======== CONTEÚDO ======== */
     main {
       max-width: 1100px;
-      margin: 120px auto 50px;
+      margin: 0 auto 60px;
       padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
 
@@ -87,7 +107,7 @@
 
     .card img {
       width: 100%;
-      height: 220px;
+      height: 200px;
       object-fit: cover;
     }
 
@@ -146,6 +166,10 @@
         margin-left: 0;
         margin-right: 15px;
       }
+
+      .intro h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -162,16 +186,26 @@
     </nav>
   </header>
 
-  <!-- Conteúdo Principal -->
+  <!-- Seção de Introdução -->
+  <section class="intro">
+    <h1>NOVO ENSINO MÉDIO</h1>
+    <p>
+      O Novo Ensino Médio foi desenvolvido para oferecer aos estudantes uma formação mais flexível e conectada com o mundo atual. 
+      Ele une as disciplinas tradicionais à possibilidade de escolher itinerários formativos que desenvolvem competências específicas, 
+      preparando o aluno tanto para o mercado de trabalho quanto para o ingresso no ensino superior.
+    </p>
+  </section>
+
+  <!-- Cards -->
   <main>
 
     <div class="card">
-      <img src="https://via.placeholder.com/800x250/007bff/ffffff?text=Análise+e+Desenvolvimento+de+Sistemas" alt="Curso ADS" />
+      <img src="https://via.placeholder.com/800x250/80bfff/ffffff?text=Ensino+Médio+Regular" alt="Ensino Médio Regular" />
       <div class="card-content">
-        <h3>Análise e Desenvolvimento de Sistemas</h3>
-        <a href="curso-ads.html" class="btn-saiba-mais">Saiba mais</a>
+        <h3>Ensino Médio Regular</h3>
+        <a href="curso-regular.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
-      <a href="localizacao-ads.html" class="location-link" title="Ver localização">
+      <a href="localizacao-regular.html" class="location-link" title="Ver localização">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
@@ -194,6 +228,17 @@
         <a href="curso-docentes.html" class="btn-saiba-mais">Saiba mais</a>
       </div>
       <a href="localizacao-docentes.html" class="location-link" title="Ver localização">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/800x250/007bff/ffffff?text=Análise+e+Desenvolvimento+de+Sistemas" alt="Curso ADS" />
+      <div class="card-content">
+        <h3>Análise e Desenvolvimento de Sistemas</h3>
+        <a href="curso-ads.html" class="btn-saiba-mais">Saiba mais</a>
+      </div>
+      <a href="localizacao-ads.html" class="location-link" title="Ver localização">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
