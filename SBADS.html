@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADS - Médio Connect</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== Reset e Geral ===== */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', Arial, sans-serif; background-color: #f4f4f4; color: #333; }
+    a { text-decoration: none; }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .logo { font-size: 1.6rem; font-weight: 600; display: flex; align-items: center; gap:10px; }
+    nav a { color:white; font-size:1.1rem; margin-left:20px; display:inline-flex; align-items:center; gap:5px; transition:0.3s; }
+    nav a:hover { color:#e67e22; }
+
+    main { max-width: 1200px; margin:80px auto 40px; padding:0 20px; }
+
+    /* ===== CARD DE DESTAQUE ===== */
+    .descricao-card {
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 40px 25px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+      max-width: 900px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .descricao-card h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .descricao-card p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* ===== SEÇÕES INFORMATIVAS ===== */
+    section {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media(max-width:768px){
+      header { flex-direction:column; text-align:center; }
+      nav a { margin:8px; }
+      .descricao-card h1 { font-size:2.2rem; }
+      .descricao-card p, section p, li { font-size:1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><i class="fas fa-graduation-cap"></i> EscolaXYZ</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- CARD DE DESTAQUE -->
+    <div class="descricao-card">
+      <h1>Análise e Desenvolvimento de Sistemas</h1>
+      <p>
+        O curso de Análise e Desenvolvimento de Sistemas (ADS) prepara os alunos para atuarem no desenvolvimento de softwares, aplicativos e sistemas para diversas áreas. Durante o curso, o estudante aprende desde conceitos de lógica de programação até gestão de projetos e desenvolvimento de soluções tecnológicas.
+      </p>
+    </div>
+
+    <!-- SOBRE O CURSO -->
+    <section>
+      <h2>Sobre o Curso</h2>
+      <p>
+        Análise e Desenvolvimento de Sistemas é um curso técnico que combina teoria e prática. O objetivo é capacitar profissionais capazes de:
+      </p>
+      <ul>
+        <li>Projetar, desenvolver e implementar sistemas de software;</li>
+        <li>Realizar análises de requisitos e propor soluções tecnológicas;</li>
+        <li>Trabalhar em equipe em projetos de tecnologia;</li>
+        <li>Garantir qualidade e manutenção de sistemas existentes;</li>
+        <li>Aplicar metodologias ágeis e boas práticas de programação.</li>
+      </ul>
+    </section>
+
+    <!-- DISCIPLINAS E HABILIDADES -->
+    <section>
+      <h2>Disciplinas e Habilidades Desenvolvidas</h2>
+      <p>
+        Durante o curso, o aluno desenvolve competências técnicas e profissionais, como:
+      </p>
+      <ul>
+        <li>Lógica de programação e algoritmos;</li>
+        <li>Programação em linguagens modernas (Java, Python, JavaScript, etc.);</li>
+        <li>Banco de dados e SQL;</li>
+        <li>Desenvolvimento de aplicativos web e mobile;</li>
+        <li>Gestão de projetos de TI;</li>
+        <li>Segurança da informação e boas práticas de software.</li>
+      </ul>
+    </section>
+
+    <!-- MERCADO DE TRABALHO -->
+    <section>
+      <h2>Mercado de Trabalho</h2>
+      <p>
+        O profissional de ADS tem grande demanda no mercado de trabalho, podendo atuar em:
+      </p>
+      <ul>
+        <li>Desenvolvimento de softwares e aplicativos;</li>
+        <li>Empresas de tecnologia, startups e consultorias;</li>
+        <li>Instituições financeiras e setores corporativos;</li>
+        <li>Projetos de inovação e transformação digital;</li>
+        <li>Suporte, manutenção e atualização de sistemas existentes.</li>
+      </ul>
+    </section>
+
+    <!-- BENEFÍCIOS DO CURSO -->
+    <section>
+      <h2>Benefícios do Curso</h2>
+      <ul>
+        <li>Formação prática e alinhada às necessidades do mercado;</li>
+        <li>Desenvolvimento de habilidades técnicas e comportamentais;</li>
+        <li>Preparação para o mercado de trabalho e projetos reais;</li>
+        <li>Possibilidade de continuar a formação acadêmica em nível superior;</li>
+        <li>Competências em tecnologias modernas e metodologias ágeis.</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
