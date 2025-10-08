@@ -4,27 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Novo Ensino Médio | EscolaXYZ</title>
-  
+
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* ======== Reset e Geral ======== */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Poppins', Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    a {
-      text-decoration: none;
-    }
+    /* ===== Reset e Geral ===== */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', Arial, sans-serif; background-color: #f4f4f4; color: #333; }
+    a { text-decoration: none; }
 
     header {
       background: #2c3e50;
@@ -34,198 +22,118 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      position: sticky;
+      top:0;
+      z-index:100;
     }
 
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .logo { font-size: 1.6rem; font-weight: 600; display: flex; align-items: center; gap:10px; }
 
-    nav a {
-      color: white;
-      font-size: 1.1rem;
-      margin-left: 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: 0.3s;
-    }
+    nav a { color:white; font-size:1.1rem; margin-left:20px; display:inline-flex; align-items:center; gap:5px; transition:0.3s; }
+    nav a:hover { color:#e67e22; }
 
-    nav a:hover {
-      color: #e67e22;
-    }
+    main { max-width: 1200px; margin:80px auto 40px; padding:0 20px; }
+    h1 { text-align:center; font-size:2.4rem; margin-bottom:15px; color:#2c3e50; }
+    p.descricao { text-align:center; font-size:1.1rem; margin-bottom:50px; color:#555; line-height:1.6; }
 
-    main {
-      max-width: 1200px;
-      margin: 80px auto 40px;
-      padding: 0 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-      color: #2c3e50;
-    }
-
-    p.descricao {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* ======== GRID DE CARDS ======== */
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+    /* ===== GRID CARDS ===== */
+    .card-container { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:25px; }
 
     .card {
       border-radius: 20px;
       padding: 30px 20px;
-      color: white;
-      text-align: center;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      color:white;
+      text-align:center;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
       transition: transform 0.3s, box-shadow 0.3s;
+      position:relative;
+      overflow:hidden;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    .card::before {
+      content:"";
+      position:absolute;
+      top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.05);
+      transition: background 0.3s;
+      z-index:0;
     }
+
+    .card:hover::before { background:rgba(0,0,0,0.1); }
+    .card:hover { transform: translateY(-8px); box-shadow:0 15px 25px rgba(0,0,0,0.25); }
 
     .card i {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
+      font-size:3.8rem;
+      margin-bottom:20px;
+      z-index:1;
+      transition: transform 0.3s;
     }
 
-    .card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      font-weight: 600;
+    .card:hover i { transform: scale(1.2); }
+
+    .card h3 { font-size:1.4rem; margin-bottom:15px; font-weight:600; z-index:1; }
+
+    /* ===== BOTÕES ===== */
+    .btn-saiba-mais, .btn-inscrever {
+      display:inline-block;
+      padding:10px 25px;
+      border-radius:25px;
+      font-weight:500;
+      transition:0.3s;
+      margin-bottom:12px;
+      position:relative;
+      z-index:1;
     }
 
-    .card .btn-saiba-mais {
-      display: inline-block;
-      padding: 10px 25px;
-      border-radius: 25px;
-      font-weight: 500;
-      transition: 0.3s;
-      margin-bottom: 12px;
-      text-decoration: none;
+    .btn-saiba-mais { background:white; color:#333; }
+    .btn-saiba-mais:hover { transform: scale(1.05); }
+
+    .btn-inscrever { background: rgba(255,255,255,0.8); color:#333; }
+    .btn-inscrever:hover { background: rgba(255,255,255,1); }
+
+    .location-link {
+      display:block;
+      margin-bottom:8px;
+      font-size:1.1rem;
+      position:relative;
+      z-index:1;
     }
 
-    .card .location-link {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-    }
+    /* ===== CORES POR CURSO ===== */
+    .regular { background:#3498db; }
+    .regular .btn-saiba-mais, .regular .btn-inscrever { color:#3498db; }
+    .regular .location-link { color:#f4f4f4; }
 
-    .card .btn-inscrever {
-      display: inline-block;
-      padding: 8px 20px;
-      border-radius: 25px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: 0.3s;
-      margin-top: 5px;
-      font-size: 0.95rem;
-    }
+    .adm { background: linear-gradient(135deg,#1a1a2e,#0f3460); }
+    .adm .btn-saiba-mais, .adm .btn-inscrever { color:#0f3460; }
+    .adm .location-link { color:#d6e0f0; }
 
-    /* ======== CORES POR CURSO ======== */
-    .regular {
-      background: #3498db;
-    }
+    .docentes { background: linear-gradient(135deg,#b57edc,#f5deb3); color:#3b006a; }
+    .docentes .btn-saiba-mais { background:#4a2e75; color:white; }
+    .docentes .btn-saiba-mais:hover { background:#6b00b3; }
+    .docentes .location-link, .docentes .btn-inscrever { color:#4a2e75; }
 
-    .regular .btn-saiba-mais {
-      background: white;
-      color: #3498db;
-    }
+    .ads { background: linear-gradient(135deg,#00aa55,#000); color:#eaffea; }
+    .ads .btn-saiba-mais, .ads .btn-inscrever { color:#00aa55; }
+    .ads .btn-saiba-mais:hover { background:#c4ffd6; }
+    .ads .location-link { color:#00ff88; }
 
-    .regular .btn-saiba-mais:hover {
-      background: #e0f0ff;
-    }
-
-    .regular .location-link, .regular .btn-inscrever {
-      color: #f4f4f4;
-    }
-
-    .adm {
-      background: linear-gradient(135deg, #1a1a2e, #0f3460);
-    }
-
-    .adm .btn-saiba-mais {
-      background: white;
-      color: #0f3460;
-    }
-
-    .adm .btn-saiba-mais:hover {
-      background: #d6e0f0;
-    }
-
-    .adm .location-link, .adm .btn-inscrever {
-      color: #d6e0f0;
-    }
-
-    .docentes {
-      background: linear-gradient(135deg, #b57edc, #f5deb3);
-      color: #3b006a;
-    }
-
-    .docentes .btn-saiba-mais {
-      background: #4a2e75;
-      color: white;
-    }
-
-    .docentes .btn-saiba-mais:hover {
-      background: #6b00b3;
-    }
-
-    .docentes .location-link, .docentes .btn-inscrever {
-      color: #4a2e75;
-    }
-
-    .ads {
-      background: linear-gradient(135deg, #00aa55, #000000);
-      color: #eaffea;
-    }
-
-    .ads .btn-saiba-mais {
-      background: white;
-      color: #00aa55;
-    }
-
-    .ads .btn-saiba-mais:hover {
-      background: #c4ffd6;
-    }
-
-    .ads .location-link, .ads .btn-inscrever {
-      color: #00ff88;
-    }
-
+    /* ===== RESPONSIVIDADE ===== */
     @media(max-width:768px){
-      header { flex-direction: column; text-align: center; }
-      nav a { margin: 8px; }
-      h1 { font-size: 1.8rem; }
-      .card i { font-size: 2.8rem; }
+      header { flex-direction:column; text-align:center; }
+      nav a { margin:8px; }
+      h1 { font-size:2rem; }
+      .card i { font-size:3rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <i class="fas fa-graduation-cap"></i> EscolaXYZ
-    </div>
+    <div class="logo"><i class="fas fa-graduation-cap"></i> EscolaXYZ</div>
     <nav>
       <a href="#"><i class="fas fa-home"></i> Home</a>
       <a href="#"><i class="fas fa-envelope"></i> Contato</a>
@@ -240,7 +148,6 @@
     </p>
 
     <div class="card-container">
-      <!-- Regular -->
       <div class="card regular">
         <i class="fas fa-school"></i>
         <h3>Ensino Médio Regular</h3>
@@ -249,7 +156,6 @@
         <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
       </div>
 
-      <!-- Administração -->
       <div class="card adm">
         <i class="fas fa-briefcase"></i>
         <h3>Administração</h3>
@@ -258,7 +164,6 @@
         <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
       </div>
 
-      <!-- Formação de Docentes -->
       <div class="card docentes">
         <i class="fas fa-chalkboard-teacher"></i>
         <h3>Formação de Docentes</h3>
@@ -267,7 +172,6 @@
         <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
       </div>
 
-      <!-- ADS -->
       <div class="card ads">
         <i class="fas fa-laptop-code"></i>
         <h3>Análise e Desenvolvimento de Sistemas</h3>
