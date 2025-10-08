@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administração - Médio Connect</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== Reset e Geral ===== */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', Arial, sans-serif; background-color: #f0f2f5; color: #333; }
+    a { text-decoration: none; }
+
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top:0;
+      z-index:100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .logo { font-size: 1.6rem; font-weight: 600; display: flex; align-items: center; gap:10px; color:#fff; }
+    nav a { color:white; font-size:1.1rem; margin-left:20px; display:inline-flex; align-items:center; gap:5px; transition:0.3s; }
+    nav a:hover { color:#00aaff; }
+
+    main { max-width: 1200px; margin:80px auto 40px; padding:0 20px; }
+
+    /* ===== CARD DE DESTAQUE ===== */
+    .descricao-card {
+      background: #0f3460;
+      color: #fff;
+      padding: 40px 25px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+      max-width: 900px;
+      margin: 0 auto 60px;
+      text-align: center;
+      border: 2px solid #00aaff;
+    }
+
+    .descricao-card h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #00aaff;
+      text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .descricao-card p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      font-weight: 500;
+      margin: 0;
+      color: #fff;
+    }
+
+    /* ===== SEÇÕES INFORMATIVAS ===== */
+    section {
+      background: #0f3460;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      margin-bottom: 30px;
+      border-left: 5px solid #00aaff;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #00aaff;
+      margin-bottom: 15px;
+    }
+
+    section p, ul, li {
+      color: #fff;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media(max-width:768px){
+      header { flex-direction:column; text-align:center; }
+      nav a { margin:8px; }
+      .descricao-card h1 { font-size:2.2rem; }
+      .descricao-card p, section p, li { font-size:1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><i class="fas fa-graduation-cap"></i> EscolaXYZ</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- CARD DE DESTAQUE -->
+    <div class="descricao-card">
+      <h1>Administração</h1>
+      <p>
+        O curso técnico de Administração prepara os alunos para atuar em empresas e organizações, desenvolvendo habilidades de gestão, planejamento, organização e liderança. O estudante aprende a gerenciar recursos, pessoas e processos para alcançar resultados eficazes.
+      </p>
+    </div>
+
+    <!-- SOBRE O CURSO -->
+    <section>
+      <h2>Sobre o Curso</h2>
+      <p>
+        Administração é um curso técnico que proporciona conhecimento prático e teórico para a gestão de empresas e organizações. O profissional é capaz de:
+      </p>
+      <ul>
+        <li>Gerenciar equipes e recursos;</li>
+        <li>Planejar e organizar processos;</li>
+        <li>Analisar indicadores de desempenho;</li>
+        <li>Tomar decisões estratégicas;</li>
+        <li>Aplicar conceitos de finanças, marketing e logística.</li>
+      </ul>
+    </section>
+
+    <!-- DISCIPLINAS E HABILIDADES -->
+    <section>
+      <h2>Disciplinas e Habilidades Desenvolvidas</h2>
+      <p>
+        Durante o curso, o aluno desenvolve competências como:
+      </p>
+      <ul>
+        <li>Gestão financeira e orçamentária;</li>
+        <li>Administração de pessoas e liderança;</li>
+        <li>Planejamento estratégico;</li>
+        <li>Marketing e atendimento ao cliente;</li>
+        <li>Organização e controle de processos;</li>
+        <li>Tomada de decisão e análise de resultados.</li>
+      </ul>
+    </section>
+
+    <!-- MERCADO DE TRABALHO -->
+    <section>
+      <h2>Mercado de Trabalho</h2>
+      <p>
+        O profissional de Administração pode atuar em diversos setores, incluindo:
+      </p>
+      <ul>
+        <li>Empresas privadas e públicas;</li>
+        <li>Startups e consultorias;</li>
+        <li>Instituições financeiras e comerciais;</li>
+        <li>Projetos de gestão e planejamento estratégico;</li>
+        <li>Setores de recursos humanos, logística e marketing.</li>
+      </ul>
+    </section>
+
+    <!-- BENEFÍCIOS DO CURSO -->
+    <section>
+      <h2>Benefícios do Curso</h2>
+      <ul>
+        <li>Formação prática e teórica em gestão e negócios;</li>
+        <li>Desenvolvimento de habilidades de liderança e organização;</li>
+        <li>Preparação para o mercado de trabalho;</li>
+        <li>Capacitação para atuar em diversos setores empresariais;</li>
+        <li>Base sólida para continuar estudos em nível superior.</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
