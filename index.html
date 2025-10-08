@@ -3,48 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Novo Ensino Médio | EscolaXYZ</title>
+  <title>Novo Ensino Médio</title>
 
-  <!-- Ícones -->
+  <!-- Font Awesome para ícones -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous"
   />
 
-  <!-- Fonte moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
+    /* ======= GERAL ======= */
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f8faff;
-      color: #2c3e50;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: linear-gradient(135deg, #007bff, #00aaff);
+      background-color: #2c3e50;
       color: white;
+      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      z-index: 10;
+      flex-wrap: wrap;
     }
 
     .logo {
-      font-size: 1.6rem;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: bold;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -52,192 +41,164 @@
 
     nav a {
       color: white;
+      text-decoration: none;
+      margin-left: 20px;
       font-size: 1.1rem;
-      margin-left: 25px;
-      transition: opacity 0.3s;
       display: inline-flex;
       align-items: center;
       gap: 5px;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      opacity: 0.8;
+      color: #e67e22;
     }
 
-    .intro {
-      max-width: 900px;
-      margin: 120px auto 40px;
+    /* ======= SEÇÃO PRINCIPAL ======= */
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
       padding: 0 20px;
+    }
+
+    h1 {
       text-align: center;
+      color: #2c3e50;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
 
-    .intro h1 {
-      font-size: 2.3rem;
-      color: #007bff;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-
-    .intro p {
+    p.descricao {
+      text-align: center;
       font-size: 1.1rem;
+      margin-bottom: 40px;
       color: #555;
     }
 
-    main {
-      max-width: 1300px;
-      margin: 0 auto 60px;
-      padding: 0 20px;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: nowrap;
-      overflow-x: auto;
+    /* ======= GRID ======= */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      flex: 1;
-      min-width: 280px;
-      max-width: 300px;
-      border-radius: 20px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
     }
 
-    .card-content {
-      padding: 25px 20px;
-      text-align: center;
-      flex-grow: 1;
-    }
-
-    .card-content i {
-      font-size: 3.5rem;
+    .card i {
+      font-size: 3rem;
       margin-bottom: 15px;
     }
 
     .card h3 {
       font-size: 1.3rem;
-      margin-bottom: 15px;
-      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    .btn-saiba-mais {
-      color: white;
-      padding: 10px 25px;
-      border-radius: 30px;
-      font-weight: 500;
-      transition: transform 0.3s;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    .btn-saiba-mais:hover {
-      transform: scale(1.05);
-    }
-
-    .location-area {
-      text-align: center;
-      padding: 15px 0 20px;
-    }
-
-    .location-link {
-      font-size: 1.6rem;
-      color: white;
-      margin-bottom: 8px;
-      display: block;
-      transition: transform 0.3s;
-    }
-
-    .location-link:hover {
-      transform: scale(1.1);
-    }
-
-    .inscrever-link {
-      display: inline-block;
+    .card p {
       font-size: 1rem;
-      color: white;
-      font-weight: 500;
-      text-decoration: underline;
-      transition: opacity 0.3s;
+      margin-bottom: 20px;
     }
 
-    .inscrever-link:hover {
-      opacity: 0.8;
+    .btn-inscrever {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s;
     }
 
-    /* ======== CORES PERSONALIZADAS ======== */
+    .btn-inscrever:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* ======= CORES DOS CURSOS ======= */
     .regular {
-      background: linear-gradient(135deg, #007bff, #00aaff);
-      color: white;
-    }
-    .regular .btn-saiba-mais {
-      background: white;
-      color: #007bff;
+      background-color: #3498db;
     }
 
     .adm {
-      background: linear-gradient(135deg, #001f3f, #007bff);
-      color: white;
-    }
-    .adm .btn-saiba-mais {
-      background: white;
-      color: #001f3f;
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
     }
 
     .docentes {
-      background: linear-gradient(135deg, #d8b4fe, #f5deb3);
-      color: #4a2e75;
-    }
-    .docentes .btn-saiba-mais {
-      background: #4a2e75;
-      color: white;
-    }
-
-    /* Ícone e link de inscrição roxos no card de docentes */
-    .docentes .location-link,
-    .docentes .inscrever-link {
-      color: #4a2e75;
+      background: linear-gradient(135deg, #b57edc, #f5deb3);
+      color: #3b006a;
     }
 
     .ads {
-      background: linear-gradient(135deg, #00b894, #000);
-      color: white;
-    }
-    .ads .btn-saiba-mais {
-      background: white;
-      color: #00b894;
+      background: linear-gradient(135deg, #006400, #000);
     }
 
-    @media (max-width: 1100px) {
-      main {
-        flex-wrap: wrap;
-      }
+    /* ======= LINK DE LOCALIZAÇÃO ======= */
+    .location-link {
+      display: block;
+      margin-top: 15px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s;
     }
 
-    @media (max-width: 600px) {
+    .regular .location-link {
+      color: #f4f4f4;
+    }
+
+    .adm .location-link {
+      color: #d6e0f0;
+    }
+
+    .docentes .location-link {
+      color: #6b00b3;
+    }
+
+    .ads .location-link {
+      color: #00ff88;
+    }
+
+    .location-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ======= RESPONSIVIDADE ======= */
+    @media (max-width: 768px) {
       header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        text-align: center;
       }
 
-      .intro h1 {
+      nav a {
+        margin: 10px;
+      }
+
+      h1 {
         font-size: 1.8rem;
+      }
+
+      .card i {
+        font-size: 2.5rem;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Cabeçalho -->
   <header>
     <div class="logo">
       <i class="fas fa-graduation-cap"></i> EscolaXYZ
@@ -248,64 +209,51 @@
     </nav>
   </header>
 
-  <section class="intro">
-    <h1>NOVO ENSINO MÉDIO</h1>
-    <p>
-      O Novo Ensino Médio foi desenvolvido para oferecer aos estudantes uma formação mais flexível e conectada com o mundo atual. 
-      Ele une as disciplinas tradicionais à possibilidade de escolher itinerários formativos que desenvolvem competências específicas, 
-      preparando o aluno tanto para o mercado de trabalho quanto para o ingresso no ensino superior.
-    </p>
-  </section>
-
+  <!-- Conteúdo Principal -->
   <main>
-    <div class="card regular">
-      <div class="card-content">
-        <i class="fas fa-book-open"></i>
-        <h3>Ensino Médio Regular</h3>
-        <a href="curso-regular.html" class="btn-saiba-mais">Saiba mais</a>
-      </div>
-      <div class="location-area">
-        <a href="localizacao-regular.html" class="location-link"><i class="fas fa-map-marker-alt"></i></a>
-        <a href="#" class="inscrever-link">Clique aqui para se inscrever</a>
-      </div>
-    </div>
+    <h1>NOVO ENSINO MÉDIO</h1>
+    <p class="descricao">
+      O novo ensino médio traz uma formação mais flexível, permitindo que o aluno escolha itinerários formativos 
+      de acordo com seus interesses e projetos de vida, desenvolvendo competências técnicas, humanas e profissionais.
+    </p>
 
-    <div class="card adm">
-      <div class="card-content">
+    <div class="card-container">
+
+      <!-- Regular -->
+      <div class="card regular">
+        <i class="fas fa-school"></i>
+        <h3>Ensino Médio Regular</h3>
+        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
+        <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
+      </div>
+
+      <!-- ADM -->
+      <div class="card adm">
         <i class="fas fa-briefcase"></i>
         <h3>Administração</h3>
-        <a href="curso-adm.html" class="btn-saiba-mais">Saiba mais</a>
+        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
+        <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
       </div>
-      <div class="location-area">
-        <a href="localizacao-adm.html" class="location-link"><i class="fas fa-map-marker-alt"></i></a>
-        <a href="#" class="inscrever-link">Clique aqui para se inscrever</a>
-      </div>
-    </div>
 
-    <div class="card docentes">
-      <div class="card-content">
+      <!-- Formação de Docentes -->
+      <div class="card docentes">
         <i class="fas fa-chalkboard-teacher"></i>
         <h3>Formação de Docentes</h3>
-        <a href="curso-docentes.html" class="btn-saiba-mais">Saiba mais</a>
+        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
+        <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
       </div>
-      <div class="location-area">
-        <a href="localizacao-docentes.html" class="location-link"><i class="fas fa-map-marker-alt"></i></a>
-        <a href="#" class="inscrever-link">Clique aqui para se inscrever</a>
-      </div>
-    </div>
 
-    <div class="card ads">
-      <div class="card-content">
+      <!-- ADS -->
+      <div class="card ads">
         <i class="fas fa-laptop-code"></i>
         <h3>Análise e Desenvolvimento de Sistemas</h3>
-        <a href="curso-ads.html" class="btn-saiba-mais">Saiba mais</a>
+        <a href="#" class="btn-inscrever">Clique aqui para se inscrever</a>
+        <a href="#" class="location-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
       </div>
-      <div class="location-area">
-        <a href="localizacao-ads.html" class="location-link"><i class="fas fa-map-marker-alt"></i></a>
-        <a href="#" class="inscrever-link">Clique aqui para se inscrever</a>
-      </div>
+
     </div>
   </main>
 
 </body>
 </html>
+
