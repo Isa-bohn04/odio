@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formação de Docentes - Médio Connect</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== Reset e Geral ===== */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', Arial, sans-serif; background-color: #8a79af; color: #333; }
+    a { text-decoration: none; }
+
+    header {
+      background: #5e4b8b;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top:0;
+      z-index:100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .logo { font-size: 1.6rem; font-weight: 600; display: flex; align-items: center; gap:10px; color:#fff; }
+    nav a { color:white; font-size:1.1rem; margin-left:20px; display:inline-flex; align-items:center; gap:5px; transition:0.3s; }
+    nav a:hover { color:#d6b3ff; }
+
+    main { max-width: 1200px; margin:80px auto 40px; padding:0 20px; }
+
+    /* ===== CARD DE DESTAQUE ===== */
+    .descricao-card {
+      background: #fff;
+      color: #5e4b8b;
+      padding: 40px 25px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      max-width: 900px;
+      margin: 0 auto 60px;
+      text-align: center;
+      border: 2px solid #d6b3ff;
+    }
+
+    .descricao-card h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #5e4b8b;
+    }
+
+    .descricao-card p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* ===== SEÇÕES INFORMATIVAS ===== */
+    section {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+      border-left: 5px solid #d6b3ff;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #5e4b8b;
+      margin-bottom: 15px;
+    }
+
+    section p, ul, li {
+      color: #5e4b8b;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media(max-width:768px){
+      header { flex-direction:column; text-align:center; }
+      nav a { margin:8px; }
+      .descricao-card h1 { font-size:2.2rem; }
+      .descricao-card p, section p, li { font-size:1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><i class="fas fa-graduation-cap"></i> EscolaXYZ</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- CARD DE DESTAQUE -->
+    <div class="descricao-card">
+      <h1>Formação de Docentes</h1>
+      <p>
+        O curso de Formação de Docentes prepara os alunos para atuar como professores e educadores, desenvolvendo competências pedagógicas, didáticas e de gestão educacional. O objetivo é formar profissionais capazes de ensinar de forma eficiente e inspiradora.
+      </p>
+    </div>
+
+    <!-- SOBRE O CURSO -->
+    <section>
+      <h2>Sobre o Curso</h2>
+      <p>
+        Formação de Docentes é um curso técnico que proporciona conhecimento teórico e prático para a educação. O profissional é capaz de:
+      </p>
+      <ul>
+        <li>Planejar aulas e atividades pedagógicas;</li>
+        <li>Aplicar métodos de ensino eficientes;</li>
+        <li>Avaliar desempenho de alunos;</li>
+        <li>Gerenciar sala de aula e recursos educativos;</li>
+        <li>Promover aprendizagem inclusiva e adaptativa.</li>
+      </ul>
+    </section>
+
+    <!-- DISCIPLINAS E HABILIDADES -->
+    <section>
+      <h2>Disciplinas e Habilidades Desenvolvidas</h2>
+      <p>
+        Durante o curso, o aluno desenvolve competências como:
+      </p>
+      <ul>
+        <li>Didática e pedagogia;</li>
+        <li>Planejamento educacional;</li>
+        <li>Gestão de sala de aula;</li>
+        <li>Metodologias ativas de ensino;</li>
+        <li>Avaliação de aprendizagem;</li>
+        <li>Comunicação e relacionamento interpessoal.</li>
+      </ul>
+    </section>
+
+    <!-- MERCADO DE TRABALHO -->
+    <section>
+      <h2>Mercado de Trabalho</h2>
+      <p>
+        O profissional de Formação de Docentes pode atuar em escolas, instituições de ensino e projetos educacionais, incluindo:
+      </p>
+      <ul>
+        <li>Ensino fundamental e médio;</li>
+        <li>Instituições técnicas e cursos profissionalizantes;</li>
+        <li>Projetos de educação infantil e programas sociais;</li>
+        <li>Capacitação e treinamento corporativo;</li>
+        <li>Consultoria educacional e pedagógica.</li>
+      </ul>
+    </section>
+
+    <!-- BENEFÍCIOS DO CURSO -->
+    <section>
+      <h2>Benefícios do Curso</h2>
+      <ul>
+        <li>Formação prática e teórica para atuar como educador;</li>
+        <li>Desenvolvimento de habilidades pedagógicas e de gestão;</li>
+        <li>Preparação para atuar em diferentes contextos educacionais;</li>
+        <li>Possibilidade de continuar estudos em nível superior;</li>
+        <li>Capacitação para promover aprendizagem de qualidade.</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
+
